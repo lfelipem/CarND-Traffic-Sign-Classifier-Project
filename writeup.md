@@ -21,11 +21,11 @@ The goals / steps of this project are the following:
 
 [image1]: ./writeup_fig/hist.png "Histogram"
 
-[image4]: ./examples2/_60.png "Traffic Sign 1"
-[image5]: ./examples2/_att.png "Traffic Sign 2"
-[image6]: ./examples2/_exc.png "Traffic Sign 3"
-[image7]: ./examples2/_priority.png "Traffic Sign 4"
-[image8]: ./examples2/_seta.png "Traffic Sign 5"
+[image4]: ./examples2/_60.jpg "Traffic Sign 1"
+[image5]: ./examples2/_att.jpg "Traffic Sign 2"
+[image6]: ./examples2/_exc.jpg "Traffic Sign 3"
+[image7]: ./examples2/_priority.jpg "Traffic Sign 4"
+[image8]: ./examples2/_seta.jpg "Traffic Sign 5"
 
 ## Rubric Points
 ###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
