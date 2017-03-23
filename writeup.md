@@ -20,7 +20,7 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./writeup_fig/hist.png "Histogram"
-
+[image2]: ./writeup_fig/normalization.png "Normalization"
 [image4]: ./examples2/_60.jpg "Traffic Sign 1"
 [image5]: ./examples2/_att.jpg "Traffic Sign 2"
 [image6]: ./examples2/_exc.jpg "Traffic Sign 3"
@@ -63,8 +63,13 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 
 ####1. Describe how, and identify where in your code, you preprocessed the image data. What tecniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc.
 
-It was not necessary to implement any preprocessing technique. Only the shuffling of the data had been performed in the sixth code cell 
+The code for this step is contained in the sixth code cell of the IPython notebook.
 
+All data sets were normalize between 0 and 1, grayscaling testing was done, but no improvement was notice. So it was discarded.
+
+Here is an example of a traffic sign image after normalization.
+
+![alt text][image2]
 
 ####2. Describe how, and identify where in your code, you set up training, validation and testing data. How much data was in each set? Explain what techniques were used to split the data into these sets. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, identify where in your code, and provide example images of the additional data)
 
@@ -100,11 +105,11 @@ My final model consisted of the following layers:
 
 The code for training the model is located in the 8-11th cell of the ipython notebook. 
 
-Learning rate = 0.001
+Learning rate = 0.0005
 
 Optimizer: AdamOptimizer
 
-EPOCHS = 80
+EPOCHS = 70
 
 BATCH_SIZE = 128
 
@@ -113,9 +118,9 @@ BATCH_SIZE = 128
 The code for calculating the accuracy of the model is located in the 10th cell of the Ipython notebook.
 
 My final model results were:
-* training set accuracy of 0.986
-* validation set accuracy of 1.000
-* test set accuracy of 0.902
+* training set accuracy of 1.000
+* validation set accuracy of 0.980
+* test set accuracy of 0.903
 
 If a well known architecture was chosen:
 * What architecture was chosen?
@@ -153,6 +158,8 @@ Here are the results of the prediction:
 The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 100%.
 All five images were classified correctly because they were clear and front images of the signs, there was no problem.
 If the images had less definition, the neural network would probably have a lower hit level.
+The acuracy of the new images is better than those of the test set. This may have occurred because the new images were a very small set of data, where all the images were accurate.
+If the set of new images were larger, possibly their propability for correctness would be closer to that of the test set.
 
 ####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction and identify where in your code softmax probabilities were outputted. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
